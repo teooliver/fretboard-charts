@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Fretboard Grids</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background-color: white;
+            padding: 15mm;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15mm;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                background-color: white;
+            }
+            
+            .grid-container {
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+
+        .fretboard-grid {
+            width: 35mm;
+            height: 50mm;
+            position: relative;
+        }
+
+        .fretboard-grid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: #333;
+        }
+
+        .strings {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .string {
+            width: 2px;
+            background-color: #333;
+            height: 100%;
+        }
+
+        .frets {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .fret {
+            height: 1px;
+            background-color: #333;
+            width: 100%;
+        }
+
+        .fret:first-child {
+            height: 3px;
+            background-color: #333;
+        }
+
+        @media screen and (max-width: 768px) {
+            .grid-container {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <!-- Row 1 -->
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+
+        <div class="fretboard-grid">
+            <div class="strings">
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+                <div class="string"></div>
+            </div>
+            <div class="frets">
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+                <div class="fret"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

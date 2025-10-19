@@ -1,0 +1,14 @@
+{
+  "name": "guitar-fretboard-chart",
+  "version": "1.0.0",
+  "description": "Guitar fretboard chart generator",
+  "main": "index.js",
+  "scripts": {
+    "generate-pdf": "node generate-pdf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^24.15.0"
+  }
+}
